@@ -2,11 +2,15 @@
 
 Ship is a system for coordinating multiple Claude Code agent sessions around your engineering work. It structures handoffs between fresh sessions so context rot doesn't eat your progress.
 
+**New here?** See [QUICKSTART.md](QUICKSTART.md) for a clone-to-first-watch walkthrough with troubleshooting, or read on for the full picture.
+
 ## How it works
 
 You're the **Captain**. You set priorities, make decisions, and steer. Claude Code acts as your **First Mate** — it manages a work queue, dispatches background agents (**Crew**) for bounded tasks, and keeps you informed. Crew sessions write structured logs when they finish, so the next session can pick up cleanly without assuming any context persists.
 
 Ship lives in a single directory on your machine (not inside any one repo). It coordinates work across whatever repos and projects you point it at.
+
+New to this vocabulary? See [GLOSSARY.md](GLOSSARY.md) for tight definitions of the terms used throughout these docs (watch, drop, handoff, ticket, and more).
 
 ## Your role as Captain
 
@@ -49,6 +53,8 @@ The Mate will read ship state, report status, and ask for steering.
 ### 3. Start working
 
 Drop work items into `inbox/captain.md` — the Mate will triage them into tickets. Or just tell the Mate what you want done. It'll dispatch crew, track progress, and report back.
+
+Not sure what a populated ship directory actually looks like? See [`examples/`](examples/) for a worked walkthrough with a sample `captain.md`, `queue.md`, ticket, and crew log — a concrete instance of the shape described above.
 
 ---
 
